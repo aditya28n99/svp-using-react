@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/svp-using-react/static/css/main.a61396d1.css",
+    "main.js": "/svp-using-react/static/js/main.1164b2da.js",
+    "static/js/787.3e2439e2.chunk.js": "/svp-using-react/static/js/787.3e2439e2.chunk.js",
+    "index.html": "/svp-using-react/index.html",
+    "main.a61396d1.css.map": "/svp-using-react/static/css/main.a61396d1.css.map",
+    "main.1164b2da.js.map": "/svp-using-react/static/js/main.1164b2da.js.map",
+    "787.3e2439e2.chunk.js.map": "/svp-using-react/static/js/787.3e2439e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a61396d1.css",
+    "static/js/main.1164b2da.js"
+  ]
+}
