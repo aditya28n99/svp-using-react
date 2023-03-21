@@ -1,0 +1,10 @@
+.HomeBody{
+    background-image: url("https://vpmpune.com/img/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    /* scroll-behavior: smooth; */
+    /* https://vpmpune.com/img/about-img.jpg */
+}

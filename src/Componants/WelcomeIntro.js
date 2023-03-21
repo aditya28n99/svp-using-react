@@ -1,6 +1,6 @@
-import React from "react";
+import './WelcomeIntro.css'
 
-function WelcomeIntro(){
+function WelcomeIntro(props){
 
     const addFadeEffect = () =>{     
         let fades = document.querySelector('.fade-effect');
@@ -10,8 +10,8 @@ function WelcomeIntro(){
     return(
         <section className="sections" id="welcome-section" onLoad={addFadeEffect}>
         <div id="welcome-heading">
-            <h1 className="element-white fade-effect">Welcome to Vidya Pratishthan, Maharashtra</h1>
-            <h6 className="fade-effect">Our Students Grow Up - To Become a Nationalist, Well Cultured and Ideal Citizen.
+            <h1 className="element-white fade-effect">{props.welcomeHeading}</h1>
+            <h6 className="fade-effect">{props.welcomeHeading2}
             </h6>
         </div>
         </section>

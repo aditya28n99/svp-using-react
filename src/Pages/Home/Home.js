@@ -1,32 +1,36 @@
-import { useState } from "react";
-import React from "react";
+import './Home.css'
+import Navbar from "../../Componants/Navbar"
+import WelcomeIntro from '../../Componants/WelcomeIntro';
+// import Footer from "./Footer";
+// import TopScrollBtn from "./TopScrollBtn";
+import { Link } from "react-router-dom";
 
-function HomeContent() {
 
-    const animateData =() => {
+function Home(){
 
-        const observer = new IntersectionObserver((all_entries) => {
-
-            all_entries.forEach((each_entry) => {
-
-                if (each_entry.intersectionRatio > 0) {
-                    each_entry.target.classList.add("show");
-                }
-            })
-        });
-        const animate = document.querySelectorAll(".animate")
-        animate.forEach((el) => observer.observe(el));
-
+    function validateForm(){
+        let name = document.forms["contactForm"]["name"].value;
+        let email = document.forms["contactForm"]["email"].value;
+        let text = document.forms["contactForm"]["name"].value;
+        if(name === "" && email === "" && text === "" ){
+            alert("Plese Provide the required data");
+        }else{
+            alert("Thank you for your responce.")
+        }
+        
     }
-
-    return (
-        <main onLoad={animateData}>
+    return(
+        <>
+        <div className='HomeBody' > 
+        <Navbar heading="Vidya Pratishthan, Maharashtra" link1="Home" path1="/" link2="Donations" path2="#article-donations" link3="Contact Us" path3="#contact-us" link5="School" path5="/school" link6="Jr College" path6="/jrcollege" link7="Gallery" path7="/gallery" />
+        <WelcomeIntro welcomeHeading="Welcome to Vidya Pratishthan, Maharashtra" welcomeHeading2="Our Students Grow Up - To Become a Nationalist, Well Cultured and Ideal Citizen."/>
+        <main>
             <section className="sections back-width card-section">
                 <div className="animate" id="card1">
                     <h1 className="element-white">Vidya Pratishthan, Maharashtra</h1>
                     <p>Aims to provide quality education to the children from economically weaker sections of the society
                     </p>
-                    <div><a href="#">About Us <i className="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <div><Link to="/">About Us <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
                     </div>
                 </div>
                 <div className="cards card2 animate">
@@ -335,18 +339,21 @@ function HomeContent() {
                     </div>
                 </div>
                 <div className="back-width animate ">
-                    <form className="form-back animate" action="">
+                    <form className="form-back animate" name='contactForm' method='post' >
 
                         <input type="text" name="name" id="input1" placeholder="Name" />
-                        <input type="email" id="input2" placeholder="Email" />
-                        <input type="text" placeholder="subject" id="input3" />
+                        <input type="email" name='email' id="input2" placeholder="Email" />
+                        <input type="text" name='text' placeholder="subject" id="input3" />
 
                         <textarea name="Message" id="input4" rows="5" placeholder="Message"></textarea>
-                        <div id="send-massage">Send Message</div>
+                        <div id="send-massage" onClick={validateForm}>Send Message</div>
                     </form>
                 </div>
             </section>
         </main>
+        </div>
+        
+        </>
     );
 }
-export default HomeContent;
+export default Home;

@@ -21,14 +21,14 @@ code {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body{
+/* body{
     background-image: url("https://vpmpune.com/img/hero-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
-}
+} */
 main{
     background-color: white; 
 }
